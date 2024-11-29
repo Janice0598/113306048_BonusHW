@@ -1,0 +1,107 @@
+/* 通用樣式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #f9f9f9;
+    overflow-y: auto;
+}
+
+/* 表單容器 */
+.form-container {
+    width: 95%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+/* 表單行樣式 */
+.form-group-row {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 控制標籤與輸入框之間的間距 */
+    margin-bottom: 20px;
+}
+
+/* 標籤樣式 */
+label {
+    font-size: 16px;
+    text-align: left;
+    white-space: nowrap; /* 避免標籤換行 */
+}
+
+/* 輸入框樣式 */
+input[type="text"], textarea {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* 單行輸入框 */
+input[type="text"] {
+    height: 40px;
+}
+
+/* 禁止 textarea 調整大小，並設置高度 */
+textarea {
+    resize: none;
+    width: 80%;
+    height: 150px;
+    padding: 10px;
+    vertical-align: top
+}
+
+/* 圖片樣式 */
+img {
+    width: 75%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+    vertical-align: top
+}
+
+/* 平板樣式調整 */
+@media (max-width: 768px) {
+    input[type="text"], textarea {
+        font-size: 13px;
+    }
+}
+
+/* 手機樣式調整 */
+@media (max-width: 480px) {
+    .form-group-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    input[type="text"], textarea {
+        flex: none;
+        width: 100%;
+    }
+
+    input[type="text"], textarea {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
